@@ -18,20 +18,26 @@ namespace RP
 	class CreateObject
 	{
 	public:
+		//type object
+		ObjectType m_type = ObjectType::NON_TYPE;;
 
-		ObjectType m_type;
 
-		int m_x = 0, m_y = 0;
-		int m_lenght = cnst::horizontal;
-		int m_weight = cnst::vertical;
+		//position and rotation
+		int m_x = 0,	m_y = 0;
+		int dx = 0,		dy = 0;
 
-		CreateObject() { m_type = ObjectType::NON_TYPE; }
-		CreateObject(int x, int y, int lenght = cnst::horizontal, int weight = cnst::vertical);
-		CreateObject(int* x, int* y, int lenght = cnst::horizontal, int weight = cnst::vertical);
+		//construct
+		CreateObject() {}
 
-		virtual void update(RP::Repository& array) {}
+		CreateObject(int x, int y, ObjectType type);
 
-		virtual ~CreateObject() {}
+		CreateObject(int* x, int* y, ObjectType& type);
+
+
+		void update(RP::Repository& array);
+
+		//destruct
+		~CreateObject() {}
 	}; //->general class(общий класс )
 
 	class Repository
@@ -60,7 +66,7 @@ namespace RP
 			return m_data[0];
 		}
 
-		virtual void update(RP::Repository &array); 
+		void update(RP::Repository &array); 
 
 		~Repository();
 	};

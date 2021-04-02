@@ -6,6 +6,7 @@
 
 namespace GL 
 {
+	/*
 	class Stone : public RP::CreateObject
 	{
 	public:
@@ -36,6 +37,7 @@ namespace GL
 
 		~Water() {};
 	};
+	*/
 
 	
 	//классы ответственные за создание и удаление объектов

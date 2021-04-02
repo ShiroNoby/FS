@@ -4,6 +4,7 @@
 
 namespace GL 
 {
+	/*
 	Stone::Stone(int* x, int* y, int lenght, int weight)
 		: CreateObject(x, y, lenght, weight) {
 		m_type = RP::ObjectType::STONE;
@@ -26,6 +27,8 @@ namespace GL
 		m_type = RP::ObjectType::WATER;
 	}
 
+	**/
+
 	/*
 	void Water::update(RP::Repository& array)
 	{
@@ -46,7 +49,8 @@ namespace GL
 		//dx = 0, dy = 0;	
 	}
 	*/
-	
+
+	/*
 	void Water::update(RP::Repository& array)
 	{
 
@@ -95,7 +99,7 @@ namespace GL
 		}
 
 	}
-
+	*/
 
 	void Create(int x, int y, RP::ObjectType& type, RP::Repository& array)
 	{
@@ -103,14 +107,14 @@ namespace GL
 		{
 		case RP::ObjectType::STONE: 
 		{
-			GL::Stone stone{ x, y };
+			RP::CreateObject stone{ x, y, type };
 			array.push_back(stone);
 			return;
 		}
 
 		case RP::ObjectType::WATER: 
 		{
-			GL::Water water{ x, y };
+			RP::CreateObject water{ x, y, type };
 			array.push_back(water);
 			return;
 		}

@@ -159,6 +159,7 @@
     <ClInclude Include="const.h" />
     <ClInclude Include="GameLogic.h" />
     <ClInclude Include="Repository.h" />
+    <ClInclude Include="tmp.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Stone.jpg" />
